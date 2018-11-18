@@ -1,0 +1,82 @@
+@prefix : <http://tetherless.rpi.edu/INPO#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Plant rdf:type owl:Class ;
+    rdfs:label "plant"^^xsd:String ,
+                "flora"^^xsd:String ,
+                "plantlife"^^xsd:String .
+
+:VascularPlant  rdf:type owl:Class ;
+    rdfs:subClassOf :Plant .
+
+:Succulent  rdf:type owl:Class ;
+    rdfs:subClassOf :VascularPlant .
+
+:WoodyPlant  rdf:type owl:Class ;
+    rdfs:subClassOf :VascularPlant .
+
+:Tree  rdf:type owl:Class ;
+    rdfs:subClassOf :WoodyPlant .
+
+:Cactus  rdf:type owl:Class ;
+    rdfs:subClassOf :Succulent .
+
+:BirchTree  rdf:type owl:Class ;
+    rdfs:subClassOf :Tree .
+
+:OakTree  rdf:type owl:Class ;
+    rdfs:subClassOf :Tree .
+
+:ConiferTree  rdf:type owl:Class ;
+    rdfs:subClassOf :Tree .
+
+:PricklyPearCactus  rdf:type owl:Class ;
+    rdfs:subClassOf :Cactus .
+
+:BarrelCactus  rdf:type owl:Class ;
+    rdfs:subClassOf :Cactus .
+
+:NightBloomingCerusCactus  rdf:type owl:Class ;
+    rdfs:subClassOf :Cactus .
+
+:YellowBirchTree  rdf:type owl:Class ;
+    rdfs:subClassOf :BirchTree .
+
+:SwampBirchTree  rdf:type owl:Class ;
+    rdfs:subClassOf :BirchTree .
+
+:BlackBirchTree  rdf:type owl:Class ;
+    rdfs:subClassOf :BirchTree .
+
+:WhiteBirchTree  rdf:type owl:Class ;
+    rdfs:subClassOf :BirchTree .
+
+:ShingleOakTree  rdf:type owl:Class ;
+    rdfs:subClassOf :OakTree .
+
+:BluejackOakTree  rdf:type owl:Class ;
+    rdfs:subClassOf :OakTree .
+
+:PineTree  rdf:type owl:Class ;
+    rdfs:subClassOf :ConiferTree .
+
+:NopalPricklyPearCactus rdf:type owl:Class ;
+    rdfs:subClassOf :PricklyPearCactus .
+
+:TunaPricklyPearCactus rdf:type owl:Class ;
+    rdfs:subClassOf :PricklyPearCactus .
+
+:HedgehogBarrelCactus  rdf:type owl:Class ;
+    rdfs:subClassOf :BarrelCactus .
+
+:GoldenBarrelCactus  rdf:type owl:Class ;
+    rdfs:subClassOf :BarrelCactus .
+
+:QueenOfTheNightCerusCactus  rdf:type owl:Class ;
+    rdfs:subClassOf :NightBloomingCerusCactus  .
+
+:SprucePineTree  rdf:type owl:Class ;
+    rdfs:subClassOf :PineTree  .
